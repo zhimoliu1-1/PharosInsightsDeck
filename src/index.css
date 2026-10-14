@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #0A0A0A;
+    background-color: #F3F3F1;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Subtle architectural grid matching Pharos reference slides */
+.pharos-slide-grid {
+  background-size: 80px 80px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.9) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* CAD / Blueprint dashed box with crisp dashes */
+.pharos-dashed-box {
+  border: 1.5px dashed #1F1F1F;
+}
+
+/* Print styles for export */
+@media print {
+  @page {
+    size: 16in 9.2in;
+    margin: 0;
+  }
+  body {
+    background: #FFFFFF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .pharos-slide-page {
+    page-break-after: always;
+    break-after: page;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}

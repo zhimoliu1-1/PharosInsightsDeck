@@ -1,0 +1,8 @@
+{
+  "name": "Pharos Web3 & AI Incubator",
+  "description": "A research-driven incubator providing end-to-end strategic execution, growth acceleration, and technical support for Web3 and AI projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

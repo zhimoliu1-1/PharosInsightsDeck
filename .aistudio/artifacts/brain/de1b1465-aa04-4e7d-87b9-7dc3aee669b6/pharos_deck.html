@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharos Web3 & AI Incubator — Capability Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', '"Noto Sans SC"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans SC"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+      background-color: #F3F3F1;
+      color: #0A0A0A;
+    }
+    .pharos-slide-grid {
+      background-size: 80px 80px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+      mask-image: linear-gradient(to bottom, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.9) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.9) 100%);
+    }
+    .pharos-dashed-box {
+      border: 1.5px dashed #1F1F1F;
+    }
+    @media print {
+      @page {
+        size: 16in 9.2in;
+        margin: 0;
+      }
+      body {
+        background: #FFFFFF !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .pharos-slide-page {
+        page-break-after: always;
+        break-after: page;
+        width: 100vw !important;
+        min-height: 100vh !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#F3F3F1] text-[#0A0A0A] antialiased">
+  <!-- Top Navigation Bar -->
+  <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-[#E0E0DC] px-6 py-3.5 flex items-center justify-between gap-6 shadow-xs">
+    <div class="flex items-center gap-2.5 font-display font-extrabold text-[17px] tracking-[-0.03em] text-[#0A0A0A]">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-5 h-5 object-contain rounded-[2px]" />
+      <span>PHAROS INSIGHTS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-5 text-[13px] font-semibold text-[#525252]">
+      <a href="#slide-1" class="hover:text-[#0A0A0A] transition-colors">01. 首页</a>
+      <a href="#slide-2" class="hover:text-[#0A0A0A] transition-colors">02. 关于 Pharos</a>
+      <a href="#slide-3" class="hover:text-[#0A0A0A] transition-colors">03. 叙事与产品</a>
+      <a href="#slide-4" class="hover:text-[#0A0A0A] transition-colors">04. 运营与增长</a>
+      <a href="#slide-5" class="hover:text-[#0A0A0A] transition-colors">05. 品牌与市场</a>
+      <a href="#slide-6" class="hover:text-[#0A0A0A] transition-colors">06. 技术支持</a>
+    </nav>
+
+    <button onclick="window.print()" class="px-3.5 py-1.5 text-xs font-bold text-[#0A0A0A] bg-[#F5C438] border border-[#0A0A0A] rounded-lg hover:bg-[#eab524] transition-colors cursor-pointer">
+      打印 / 导出 PDF
+    </button>
+  </header>
+
+  <!-- Deck Wrapper (No clipping, completely visible) -->
+  <main class="max-w-[1340px] mx-auto px-3 sm:px-6 py-6 pb-20 space-y-10">
+
+    <!-- SLIDE 1: Hero Page -->
+    <section id="slide-1" class="pharos-slide-page relative w-full bg-white border border-[#E0E0DC] shadow-[0_10px_35px_-12px_rgba(0,0,0,0.07)] flex flex-col justify-between overflow-visible rounded-sm">
+      <div class="pharos-slide-grid absolute inset-0 pointer-events-none z-0"></div>
+      
+      <!-- Slide Top Bar -->
+      <div class="relative z-10 flex items-center justify-between gap-4 px-6 sm:px-12 pt-6 pb-2">
+        <div class="inline-flex items-center gap-2 select-none shrink-0">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-6 h-6 object-contain rounded-[2px]" />
+          <span class="text-[22px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-none font-display inline-flex items-baseline gap-1">
+            PHAROS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span>
+          </span>
+        </div>
+        <div class="flex-1 h-[1px] bg-[#DCDCDC]"></div>
+        <div class="flex items-center gap-3 shrink-0">
+          <svg viewBox="0 0 32 32" fill="none" class="w-6 h-6 text-[#0A0A0A] shrink-0">
+            <path d="M16 0L17.8 12.5L16 16L14.2 12.5L16 0Z" fill="currentColor" />
+            <path d="M16 32L17.8 19.5L16 16L14.2 19.5L16 32Z" fill="currentColor" />
+            <path d="M0 16L12.5 14.2L16 16L12.5 17.8L0 16Z" fill="currentColor" />
+            <path d="M32 16L19.5 14.2L16 16L19.5 17.8L32 16Z" fill="currentColor" />
+            <path d="M4.5 4.5L14.2 12.2L16 16L12.2 14.2L4.5 4.5Z" fill="currentColor" />
+            <path d="M27.5 27.5L17.8 19.8L16 16L19.8 17.8L27.5 27.5Z" fill="currentColor" />
+            <path d="M27.5 4.5L19.8 14.2L16 16L17.8 12.2L27.5 4.5Z" fill="currentColor" />
+            <path d="M4.5 27.5L12.2 17.8L16 16L14.2 19.8L4.5 27.5Z" fill="currentColor" />
+            <circle cx="16" cy="16" r="1.6" fill="#FFFFFF" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Slide Body -->
+      <div class="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-12 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div class="lg:col-span-6 flex flex-col justify-center space-y-6">
+            <div>
+              <h1 class="text-[60px] sm:text-[76px] lg:text-[88px] font-extrabold tracking-[-0.04em] leading-[0.98] text-[#0A0A0A] font-display inline-flex items-baseline">
+                Pharos<span class="inline-block w-4 h-4 sm:w-5 sm:h-5 lg:w-[22px] lg:h-[22px] rounded-full bg-[#F5C438] ml-2 sm:ml-3 shrink-0"></span>
+              </h1>
+            </div>
+            <div class="space-y-2 pt-1">
+              <h2 class="text-[21px] sm:text-[25px] font-bold text-[#141414] tracking-[-0.01em] leading-snug">
+                从早期构想到市场增长，赋能 Web3 &amp; AI 创新
+              </h2>
+              <p class="text-[16px] text-[#404040] font-medium tracking-tight">
+                项目孵化与全生命周期赋能服务
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-6 flex items-center justify-center lg:justify-end">
+            <!-- Architectural Lighthouse Photography (User Banner) -->
+            <div class="relative w-full max-w-[560px] aspect-[528/325] bg-[#0E0E0E] overflow-hidden rounded-sm shadow-md border border-[#141414]/15">
+              <img src="./banner.png" alt="Pharos Architectural Lighthouse" class="w-full h-full object-cover" loading="eager" />
+              <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10"></div>
+                <svg viewBox="0 0 640 440" class="absolute inset-0 w-full h-full pointer-events-none" fill="none">
+                  <g stroke="#FFFFFF" stroke-width="1" opacity="0.65">
+                    <line x1="16" y1="20" x2="28" y2="20" />
+                    <line x1="22" y1="14" x2="22" y2="26" />
+                    <line x1="612" y1="20" x2="624" y2="20" />
+                    <line x1="618" y1="14" x2="618" y2="26" />
+                    <line x1="16" y1="420" x2="28" y2="420" />
+                    <line x1="22" y1="414" x2="22" y2="426" />
+                    <line x1="612" y1="420" x2="624" y2="420" />
+                    <line x1="618" y1="414" x2="618" y2="426" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Footer Bar -->
+      <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 px-6 sm:px-12 pb-5 pt-3 text-[12.5px] text-[#141414] border-t border-[#F0F0EE]">
+        <div class="font-mono text-xs font-semibold text-[#737373]">01 / 06</div>
+        <div class="flex flex-wrap items-center gap-5 sm:gap-8 ml-auto font-medium">
+          <a href="https://x.com/PharosInsights" target="_blank" class="inline-flex items-center gap-1.5 hover:text-[#525252]">
+            <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20" /></svg>
+            <span>@PharosInsights</span>
+          </a>
+          <a href="https://pharosinsights.com" target="_blank" class="inline-flex items-center gap-1.5 hover:text-[#525252]">
+            <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18" /></svg>
+            <span>pharosinsights.com</span>
+          </a>
+          <a href="mailto:info@pharosinsights.com" class="inline-flex items-center gap-1.5 hover:text-[#525252]">
+            <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
+            <span>info@pharosinsights.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: About -->
+    <section id="slide-2" class="pharos-slide-page relative w-full bg-white border border-[#E0E0DC] shadow-[0_10px_35px_-12px_rgba(0,0,0,0.07)] flex flex-col justify-between overflow-visible rounded-sm">
+      <div class="pharos-slide-grid absolute inset-0 pointer-events-none z-0"></div>
+      <div class="relative z-10 flex items-center justify-between gap-4 px-6 sm:px-12 pt-6 pb-2">
+        <div class="inline-flex items-center gap-2 select-none shrink-0">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-6 h-6 object-contain rounded-[2px]" />
+          <span class="text-[22px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-none font-display inline-flex items-baseline gap-1">
+            PHAROS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span>
+          </span>
+        </div>
+        <div class="flex-1 h-[1px] bg-[#DCDCDC]"></div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="text-[20px] font-bold text-[#0A0A0A] font-display inline-flex items-baseline gap-1">About<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span></span>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-12 py-5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+            <div>
+              <h2 class="text-[36px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-[1.1] font-display inline-flex items-baseline">
+                关于 Pharos<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#F5C438] ml-2 shrink-0"></span>
+              </h2>
+              <p class="mt-1.5 text-[20px] font-bold text-[#141414] tracking-tight">
+                <span class="text-[#F5B82E]">不止建议</span>，更参与执行
+              </p>
+            </div>
+            <div class="space-y-4 text-[14.5px] leading-[1.75] text-[#373737]">
+              <p>
+                Pharos 是一家研究驱动的 Web3 &amp; AI 孵化器与战略伙伴，通过<strong class="font-bold text-[#0A0A0A]">孵化、投资、咨询与深度执行</strong>，陪伴创新项目从早期定位、产品打磨走向市场启动、生态拓展、用户增长及金融运作，为项目全生命周期提供支持。
+              </p>
+              <p>
+                我们以行业研究识别机会，以产品与增长策略明确路径，并根据项目阶段、团队能力与业务目标，整合<strong class="font-bold text-[#0A0A0A]">研究、策略、资源及执行团队</strong>，结合技术能力与全球生态网络，将策略转化为具体交付。从叙事与经济模型设计，到品牌建设、用户增长及技术开发，我们不仅提供建议，更参与执行，帮助团队补齐关键短板，兼顾阶段性突破与长期价值建设。
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="pharos-dashed-box rounded-[18px] bg-white/90 p-5 flex flex-col justify-between min-h-[155px]">
+              <div class="text-[38px] font-extrabold text-[#0A0A0A] font-display">6 年以上</div>
+              <div class="text-[15px] font-bold text-[#141414]">行业经验<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[12px] text-[#525252]">跨越多个加密与科技周期，沉淀成熟的孵化与资本市场方法论</p>
+            </div>
+            <div class="pharos-dashed-box rounded-[18px] bg-white/90 p-5 flex flex-col justify-between min-h-[155px]">
+              <div class="text-[38px] font-extrabold text-[#0A0A0A] font-display">30+</div>
+              <div class="text-[15px] font-bold text-[#141414]">孵化项目<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[12px] text-[#525252]">覆盖 Web3 基础设施、AI、Payment、DeFi等核心赛道，支持项目从0到1至全生命周期发展</p>
+            </div>
+            <div class="pharos-dashed-box rounded-[18px] bg-white/90 p-5 flex flex-col justify-between min-h-[155px]">
+              <div class="text-[38px] font-extrabold text-[#0A0A0A] font-display">500+</div>
+              <div class="text-[15px] font-bold text-[#141414]">生态合作伙伴<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[12px] text-[#525252]">深度连接公链生态、优质项目方、头部机构、基础设施伙伴与全球渠道及供应商伙伴</p>
+            </div>
+            <div class="pharos-dashed-box rounded-[18px] bg-white/90 p-5 flex flex-col justify-between min-h-[155px]">
+              <div class="text-[38px] font-extrabold text-[#0A0A0A] font-display">1,000+</div>
+              <div class="text-[15px] font-bold text-[#141414]">全球媒体及社区资源<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[12px] text-[#525252]">覆盖北美、亚太、欧洲及中东核心加密市场的一线媒体与 KOL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 px-6 sm:px-12 pb-5 pt-3 text-[12.5px] text-[#141414] border-t border-[#F0F0EE]">
+        <div class="font-mono text-xs font-semibold text-[#737373]">02 / 06</div>
+        <div class="flex items-center gap-6 ml-auto font-medium">
+          <span>@PharosInsights</span><span>pharosinsights.com</span><span>info@pharosinsights.com</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: Narrative & Product Prototype -->
+    <section id="slide-3" class="pharos-slide-page relative w-full bg-white border border-[#E0E0DC] shadow-[0_10px_35px_-12px_rgba(0,0,0,0.07)] flex flex-col justify-between overflow-visible rounded-sm">
+      <div class="pharos-slide-grid absolute inset-0 pointer-events-none z-0"></div>
+      <div class="relative z-10 flex items-center justify-between gap-4 px-6 sm:px-12 pt-6 pb-2">
+        <div class="inline-flex items-center gap-2 font-display font-extrabold text-[22px]">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-6 h-6 object-contain" />
+          <span>PHAROS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438]"></span></span>
+        </div>
+        <div class="flex-1 h-[1px] bg-[#DCDCDC]"></div>
+        <span class="text-[20px] font-bold font-display">Narrative &amp; Product<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+      </div>
+
+      <div class="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-12 py-4">
+        <div class="mb-3">
+          <h2 class="text-[30px] font-extrabold tracking-[-0.03em] font-display inline-flex items-baseline">
+            项目叙事与产品原型设计<span class="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5"></span>
+          </h2>
+          <p class="text-[16px] font-bold text-[#141414] mt-0.5">将技术优势，转化为市场听得懂、用户愿意参与的产品价值。</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+          <div class="lg:col-span-6 border border-[#262626] rounded-xl bg-white/95 p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-2 border-b border-[#E5E5E5]">
+                <h3 class="text-[17px] font-extrabold"><span class="text-[#F5B82E]">专属行研</span>｜支撑决策，而非止于报告</h3>
+                <span class="text-[10.5px] font-mono text-[#737373]">01. RESEARCH</span>
+              </div>
+              <p class="text-[12.5px] text-[#404040] mt-2 leading-relaxed">配置专业行研团队，持续跟踪技术革新、赛道格局、叙事热点、社区社媒动向及竞品产品与增长路径，支持定位、产品优先级与市场策略调整。</p>
+            </div>
+            <div class="space-y-2.5 mt-3">
+              <div>
+                <span class="font-bold text-[#0A0A0A] text-[14px]"><span class="text-[#F5B82E]">赛道</span>与竞争：</span>
+                <span class="text-[12.5px] text-[#404040]">分析竞争格局、用户需求与切入点，找到差异化空间。</span>
+              </div>
+              <div>
+                <span class="font-bold text-[#0A0A0A] text-[14px]"><span class="text-[#F5B82E]">叙事</span>与趋势：</span>
+                <span class="text-[12.5px] text-[#404040]">筛选与项目契合的热点，保持核心定位，提升市场相关性。</span>
+              </div>
+              <div>
+                <span class="font-bold text-[#0A0A0A] text-[14px]"><span class="text-[#F5B82E]">产品</span>与反馈：</span>
+                <span class="text-[12.5px] text-[#404040]">结合竞品机制、社区讨论及用户反馈，指导产品快速迭代。</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 border-[1.5px] border-dashed border-[#1F1F1F] rounded-xl bg-white/95 p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-2 border-b border-[#E5E5E5]">
+                <h3 class="text-[17px] font-extrabold"><span class="text-[#F5B82E]">立项方案</span>｜叙事 <span class="text-[#F5B82E]">×</span> Tokenomics <span class="text-[#F5B82E]">×</span> 产品机制</h3>
+                <span class="text-[10.5px] font-mono text-[#737373]">02. MECHANISM</span>
+              </div>
+              <p class="text-[12.5px] text-[#404040] mt-2 leading-relaxed">基于技术、产品与市场及用户洞察，构建价值主张和叙事；按需设计 Web3 原生激励与权益机制，让产品行为与经济模型协同，而非简单叠加代币积分。</p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 my-2">
+              <div class="border border-[#262626] rounded p-2 bg-white text-center">
+                <div class="text-[10px] font-mono text-[#737373]">NARRATIVE</div>
+                <div class="font-bold text-[13px] text-[#0A0A0A] mt-0.5">价值主张与叙事</div>
+              </div>
+              <div class="border border-[#262626] rounded p-2 bg-white text-center">
+                <div class="text-[10px] font-mono text-[#737373]">TOKENOMICS</div>
+                <div class="font-bold text-[13px] text-[#0A0A0A] mt-0.5">原生激励与模型</div>
+              </div>
+              <div class="border border-[#262626] rounded p-2 bg-white text-center">
+                <div class="text-[10px] font-mono text-[#737373]">PROTOTYPE</div>
+                <div class="font-bold text-[13px] text-[#0A0A0A] mt-0.5">优化产品机制适配于Web3经济模型及运营策略</div>
+              </div>
+            </div>
+            <div class="text-[11.5px] text-[#525252] font-mono text-center border-t border-dashed border-[#D4D4D4] pt-1">
+              ← 协同飞轮 · 深度赋能 →
+            </div>
+          </div>
+        </div>
+
+        <!-- Compact Slim Deliverable Strip (Never overflows or cuts off) -->
+        <div class="border-[1.5px] border-dashed border-[#1F1F1F] bg-white/95 rounded-lg px-4 py-2 mt-3 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="w-2 h-2 bg-[#F5C438] border border-[#0A0A0A]"></span>
+            <span class="text-[13px] font-extrabold text-[#0A0A0A]">核心交付<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-semibold text-[#171717]">
+            <span>赛道与竞品研究</span><span class="text-[#F5C438]">·</span>
+            <span>定位与叙事策略</span><span class="text-[#F5C438]">·</span>
+            <span>Tokenomics 设计</span><span class="text-[#F5C438]">·</span>
+            <span>原型与机制优化</span><span class="text-[#F5C438]">·</span>
+            <span>白皮书</span><span class="text-[#F5C438]">·</span>
+            <span>官网内容</span><span class="text-[#F5C438]">·</span>
+            <span>项目 Deck</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 px-6 sm:px-12 pb-5 pt-3 text-[12.5px] text-[#141414] border-t border-[#F0F0EE]">
+        <div class="font-mono text-xs font-semibold text-[#737373]">03 / 06</div>
+        <div class="flex items-center gap-6 ml-auto font-medium">
+          <span>@PharosInsights</span><span>pharosinsights.com</span><span>info@pharosinsights.com</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Growth & Operations -->
+    <section id="slide-4" class="pharos-slide-page relative w-full bg-white border border-[#E0E0DC] shadow-[0_10px_35px_-12px_rgba(0,0,0,0.07)] flex flex-col justify-between overflow-visible rounded-sm">
+      <div class="pharos-slide-grid absolute inset-0 pointer-events-none z-0"></div>
+      <div class="relative z-10 flex items-center justify-between gap-4 px-6 sm:px-12 pt-6 pb-2">
+        <div class="inline-flex items-center gap-2 font-display font-extrabold text-[22px]">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-6 h-6 object-contain" />
+          <span>PHAROS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438]"></span></span>
+        </div>
+        <div class="flex-1 h-[1px] bg-[#DCDCDC]"></div>
+        <span class="text-[20px] font-bold font-display">Growth &amp; Ops<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+      </div>
+
+      <div class="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-12 py-4">
+        <div class="mb-2">
+          <h2 class="text-[30px] font-extrabold tracking-[-0.03em] font-display inline-flex items-baseline">
+            运营与增长<span class="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5"></span>
+          </h2>
+          <p class="text-[16px] font-bold text-[#141414] mt-0.5">按阶段定策略，配团队与资源，把增长落到执行。</p>
+        </div>
+
+        <div class="mb-3">
+          <div class="text-[15px] font-extrabold mb-1.5"><span class="text-[#F5B82E]">增长策略</span>｜匹配项目周期与产品阶段</div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="bg-white border border-[#E5E5E5] rounded-lg p-3">
+              <div class="text-[11px] font-mono text-[#737373]">STAGE 01</div>
+              <div class="font-bold text-[14px]">冷启动与验证<span class="inline-block w-1 h-1 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[11.5px] text-[#404040] mt-1">明确种子用户及参与理由，通过招募与体验验证产品价值和转化路径。</p>
+            </div>
+            <div class="bg-white border border-[#E5E5E5] rounded-lg p-3">
+              <div class="text-[11px] font-mono text-[#737373]">STAGE 02</div>
+              <div class="font-bold text-[14px]">迭代与持续增长<span class="inline-block w-1 h-1 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[11.5px] text-[#404040] mt-1">围绕使用场景配置任务、推荐与激励，提升有效获客、激活和留存。</p>
+            </div>
+            <div class="bg-white border border-[#E5E5E5] rounded-lg p-3">
+              <div class="text-[11px] font-mono text-[#737373]">STAGE 03</div>
+              <div class="font-bold text-[14px]">规模化与关键节点<span class="inline-block w-1 h-1 rounded-full bg-[#F5C438] ml-1"></span></div>
+              <p class="text-[11.5px] text-[#404040] mt-1">重大上线或 TGE 前，联动活动、社区与生态，集中触达并承接转化。</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-[15px] font-extrabold mb-1.5"><span class="text-[#F5B82E]">执行落地</span>｜三大方向配人、配资源</div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="pharos-dashed-box rounded-lg p-3 bg-white">
+              <div class="font-bold text-[14px]">活动运营：</div>
+              <p class="text-[11.5px] text-[#404040] mt-0.5">设计并执行 Campaign，覆盖任务、激励与排期，引导用户进入核心体验。</p>
+            </div>
+            <div class="pharos-dashed-box rounded-lg p-3 bg-white">
+              <div class="font-bold text-[14px]">社区与社媒：</div>
+              <p class="text-[11.5px] text-[#404040] mt-0.5">配置 X、Telegram、Discord 运营，执行排期、互动、答疑与反馈整理。</p>
+            </div>
+            <div class="pharos-dashed-box rounded-lg p-3 bg-white">
+              <div class="font-bold text-[14px]">生态资源拓展：</div>
+              <p class="text-[11.5px] text-[#404040] mt-0.5">按场景筛选伙伴，推进对接、联合 Campaign 与场景合作，持续拓展用户。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-[1.5px] border-dashed border-[#1F1F1F] bg-white/95 rounded-lg px-4 py-2 mt-3 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="w-2 h-2 bg-[#F5C438] border border-[#0A0A0A]"></span>
+            <span class="text-[13px] font-extrabold text-[#0A0A0A]">核心交付<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-semibold text-[#171717]">
+            <span>阶段策略与指标</span><span class="text-[#F5C438]">·</span>
+            <span>人员及资源配置</span><span class="text-[#F5C438]">·</span>
+            <span>活动计划与排期</span><span class="text-[#F5C438]">·</span>
+            <span>社区社媒排期</span><span class="text-[#F5C438]">·</span>
+            <span>生态合作清单</span><span class="text-[#F5C438]">·</span>
+            <span>复盘优化建议</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 px-6 sm:px-12 pb-5 pt-3 text-[12.5px] text-[#141414] border-t border-[#F0F0EE]">
+        <div class="font-mono text-xs font-semibold text-[#737373]">04 / 06</div>
+        <div class="flex items-center gap-6 ml-auto font-medium">
+          <span>@PharosInsights</span><span>pharosinsights.com</span><span>info@pharosinsights.com</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Brand & Market -->
+    <section id="slide-5" class="pharos-slide-page relative w-full bg-white border border-[#E0E0DC] shadow-[0_10px_35px_-12px_rgba(0,0,0,0.07)] flex flex-col justify-between overflow-visible rounded-sm">
+      <div class="pharos-slide-grid absolute inset-0 pointer-events-none z-0"></div>
+      <div class="relative z-10 flex items-center justify-between gap-4 px-6 sm:px-12 pt-6 pb-2">
+        <div class="inline-flex items-center gap-2 font-display font-extrabold text-[22px]">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-6 h-6 object-contain" />
+          <span>PHAROS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438]"></span></span>
+        </div>
+        <div class="flex-1 h-[1px] bg-[#DCDCDC]"></div>
+        <span class="text-[20px] font-bold font-display">Brand &amp; Market<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+      </div>
+
+      <div class="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-12 py-4">
+        <div class="mb-2.5">
+          <h2 class="text-[30px] font-extrabold tracking-[-0.03em] font-display inline-flex items-baseline">
+            品牌与市场<span class="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5"></span>
+          </h2>
+          <p class="text-[16px] font-bold text-[#141414] mt-0.5">统一品牌表达，精准触达市场</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+          <div class="lg:col-span-6 flex flex-col gap-3.5 h-full">
+            <div class="border border-[#262626] rounded-xl bg-white p-3.5 flex items-start gap-3.5 flex-1">
+              <div class="shrink-0 mt-0.5">
+                <svg viewBox="0 0 48 48" fill="none" class="w-9 h-9">
+                  <rect x="6" y="8" width="22" height="22" rx="4" stroke="#141414" stroke-width="1.8" fill="#F5C438" fill-opacity="0.25"></rect>
+                  <rect x="20" y="18" width="22" height="22" rx="4" stroke="#141414" stroke-width="1.8" fill="#FFFFFF"></rect>
+                  <circle cx="31" cy="29" r="4" fill="#F5C438" stroke="#141414" stroke-width="1.5"></circle>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <h3 class="font-extrabold text-[15px]"><span class="text-[#F5B82E]">品牌</span>与视觉建设</h3>
+                <p class="text-[12px] text-[#404040] mt-1 leading-relaxed">设计团队覆盖官网升级、视觉规范、社媒素材、项目介绍及活动物料，以统一品牌主张，让用户、伙伴与投资人快速理解项目价值。</p>
+              </div>
+            </div>
+
+            <div class="border border-[#262626] rounded-xl bg-white p-3.5 flex items-start gap-3.5 flex-1">
+              <div class="shrink-0 mt-0.5">
+                <svg viewBox="0 0 48 48" fill="none" class="w-9 h-9">
+                  <rect x="10" y="8" width="28" height="32" rx="3" stroke="#141414" stroke-width="1.8" fill="#FFFFFF"></rect>
+                  <line x1="16" y1="16" x2="32" y2="16" stroke="#141414" stroke-width="1.8" stroke-linecap="round"></line>
+                  <line x1="16" y1="22" x2="28" y2="22" stroke="#141414" stroke-width="1.8" stroke-linecap="round"></line>
+                  <line x1="16" y1="28" x2="24" y2="28" stroke="#F5C438" stroke-width="2.5" stroke-linecap="round"></line>
+                  <circle cx="30" cy="28" r="2.5" fill="#F5C438"></circle>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <h3 class="font-extrabold text-[15px]"><span class="text-[#F5B82E]">内容策略</span>与传播执行</h3>
+                <p class="text-[12px] text-[#404040] mt-1 leading-relaxed">围绕定位、产品进展与关键节点，制定主题与传播节奏；将技术转化为易懂、易传播的内容，统一官网、社媒、媒体与社区信息。</p>
+              </div>
+            </div>
+
+            <div class="border border-[#262626] rounded-xl bg-white p-3.5 flex items-start gap-3.5 flex-1">
+              <div class="shrink-0 mt-0.5">
+                <svg viewBox="0 0 48 48" fill="none" class="w-9 h-9">
+                  <circle cx="24" cy="24" r="16" stroke="#141414" stroke-width="1.5" fill="#FFFFFF"></circle>
+                  <circle cx="24" cy="24" r="10" stroke="#141414" stroke-width="1.4" stroke-dasharray="3 3"></circle>
+                  <circle cx="24" cy="24" r="4.5" fill="#F5C438" stroke="#141414" stroke-width="1.5"></circle>
+                  <path d="M35 13L26 22" stroke="#141414" stroke-width="1.6" stroke-linecap="round"></path>
+                  <path d="M33 9L39 9L39 15" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <h3 class="font-extrabold text-[15px]"><span class="text-[#F5B82E]">线上与线下</span>活动曝光</h3>
+                <p class="text-[12px] text-[#404040] mt-1 leading-relaxed">策划线上联合活动与生态 AMA，统筹组织全球顶级行业展会及周边活动（Side Event），沉淀现场声量与网络连接，直接转化为项目品牌传播及获客转化赋能。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 border-[1.5px] border-dashed border-[#1F1F1F] rounded-xl bg-white p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-1 border-b border-[#E5E5E5]">
+                <h3 class="font-extrabold text-[16px]"><span class="text-[#F5B82E]">全球优质</span>资源网络</h3>
+                <span class="font-mono text-xs font-bold">1,000+ KOLS &amp; MEDIA</span>
+              </div>
+              <div class="my-2">
+                <img src="./map.png" alt="全球优质资源网络" class="w-full h-auto max-h-[190px] object-contain rounded" />
+              </div>
+            </div>
+            <p class="text-[12.5px] text-[#404040] my-2 leading-relaxed">
+              整合全球优质 KOL、媒体及社区资源，按赛道与受众精准匹配。依托长期合作直接沟通，及时响应、快速排期，发挥集采议价优势提升预算 ROI。
+            </p>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="border border-dashed border-[#262626] rounded p-2 bg-[#FAFAFA] text-center">
+                <div class="font-bold text-[12px]">精准匹配<span class="inline-block w-1 h-1 rounded-full bg-[#F5C438] ml-0.5"></span></div>
+                <div class="text-[10.5px] text-[#525252]">受众画像筛选</div>
+              </div>
+              <div class="border border-dashed border-[#262626] rounded p-2 bg-[#FAFAFA] text-center">
+                <div class="font-bold text-[12px]">直接沟通<span class="inline-block w-1 h-1 rounded-full bg-[#F5C438] ml-0.5"></span></div>
+                <div class="text-[10.5px] text-[#525252]">快速响应排期</div>
+              </div>
+              <div class="border border-dashed border-[#262626] rounded p-2 bg-[#FAFAFA] text-center">
+                <div class="font-bold text-[12px]">议价优势<span class="inline-block w-1 h-1 rounded-full bg-[#F5C438] ml-0.5"></span></div>
+                <div class="text-[10.5px] text-[#525252]">预算效率倍增</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-[1.5px] border-dashed border-[#1F1F1F] bg-white/95 rounded-lg px-4 py-2 mt-3 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="w-2 h-2 bg-[#F5C438] border border-[#0A0A0A]"></span>
+            <span class="text-[13px] font-extrabold text-[#0A0A0A]">核心交付<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-semibold text-[#171717]">
+            <span>品牌视觉规范</span><span class="text-[#F5C438]">·</span>
+            <span>官网及宣发物料</span><span class="text-[#F5C438]">·</span>
+            <span>内容策略与排期</span><span class="text-[#F5C438]">·</span>
+            <span>KOL与媒体投放策略及执行</span><span class="text-[#F5C438]">·</span>
+            <span>全球渠道合作计划</span><span class="text-[#F5C438]">·</span>
+            <span>线上线下活动方案</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 px-6 sm:px-12 pb-5 pt-3 text-[12.5px] text-[#141414] border-t border-[#F0F0EE]">
+        <div class="font-mono text-xs font-semibold text-[#737373]">05 / 06</div>
+        <div class="flex items-center gap-6 ml-auto font-medium">
+          <span>@PharosInsights</span><span>pharosinsights.com</span><span>info@pharosinsights.com</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: Technical Support -->
+    <section id="slide-6" class="pharos-slide-page relative w-full bg-white border border-[#E0E0DC] shadow-[0_10px_35px_-12px_rgba(0,0,0,0.07)] flex flex-col justify-between overflow-visible rounded-sm">
+      <div class="pharos-slide-grid absolute inset-0 pointer-events-none z-0"></div>
+      <div class="relative z-10 flex items-center justify-between gap-4 px-6 sm:px-12 pt-6 pb-2">
+        <div class="inline-flex items-center gap-2 font-display font-extrabold text-[22px]">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhxJREFUeAHtlz0vBEEYx//eGiGWhqim08lKlIpVUq1PYPkAQqmyPoEraSyfgE6h2IJSQq/YU6EQF9cI4czEbLLW3JmXx3HJ/ZLnbm9envnd3czsbA+ABjqAXnQIXVFquqLUdEWp6Qch3nAfwrkR/t6L47MnVG9fQEmDIrZWxxuN8+kvIcqo8vfxlxiORIujqKxNfisPZoZwc/eCq+tnuEIyR5cXxqzqTCARZRMDVnUmkIhW716t6kwgEd3ev29ad3jyCApIFlOVL5gefC6enFr9HZt7t9g9fgAFIj/ZeVTso7NTg7VR/n56Ufdq9TdQQSrKqfHYkNc7PDwQQS26wsOX11c8EhBCdfeIZb5UBmQZVX6SJEdSzCuU5X/7wX8RzQpSYaE8LMhfuo7juo9WeczjcxEJgkJdfi3qlmRbJ2y/pdjJWSlX8Ze7LNX5so/teNYdw5IIU7Qpb09Bu0XX8Z1I0S7SbPcrojHUJIq2SZO2scW4JJKCDOp5DCJZEkm/RT+fSNZZUrAOs/lsI/tjg58GEqQt+qca/WMNj6YVYn5FGoN4GoPonKIitN5nlYUZWs+tIqGGaKiZy4d6USpFxR2FQZ9EQzQxyMeayH75cADzw26mIWr64CQcKlCIikQ6i6ZMAP3tJYA5xd3EaD6WqUBfNIYdTDo6PdeYnDMz/BEM+pJ5MFjicnDW3XJc+ziTwvwXTdFmGMwl87BaEx/ahmYoJydGCAAAAABJRU5ErkJggg==" alt="Pharos Logo" class="w-6 h-6 object-contain" />
+          <span>PHAROS<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438]"></span></span>
+        </div>
+        <div class="flex-1 h-[1px] bg-[#DCDCDC]"></div>
+        <span class="text-[20px] font-bold font-display">Tech Stack<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+      </div>
+
+      <div class="relative z-10 flex-1 flex flex-col justify-between px-6 sm:px-12 py-3.5">
+        <!-- Top Header -->
+        <div class="mb-1.5">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase bg-[#F5C438]/20 border border-[#F5C438]/60 text-[#141414]">
+              DUAL-ENGINE CAPABILITIES
+            </span>
+            <span class="text-[10.5px] font-mono text-[#737373]">TECH RESERVES &amp; DELIVERY</span>
+          </div>
+          <h2 class="text-[28px] sm:text-[32px] font-extrabold tracking-[-0.03em] font-display inline-flex items-baseline">
+            AI 与区块链双重技术储备<span class="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5"></span>
+          </h2>
+          <p class="text-[15.5px] font-bold text-[#141414] mt-0.5">专家支持关键决策，专业团队加速开发<span class="text-[#F5C438]">。</span></p>
+          <p class="text-[12px] sm:text-[12.5px] text-[#404040] mt-1 max-w-4xl leading-relaxed">
+            Pharos 拥有覆盖 AI 与区块链两大方向的技术开发团队与领域专家，为 AI 应用、区块链产品及融合场景提供专业支持。从技术咨询到开发交付，按项目需求匹配技术力量，帮助团队降低试错成本、补齐能力短板、加快产品落地。
+          </p>
+        </div>
+
+        <!-- Middle Section: Dual Tech Reserves & Two Core Service Pillars -->
+        <div class="space-y-2.5 my-auto py-1">
+          <!-- Dual Tech Reserves Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3">
+            <!-- AI 技术储备 -->
+            <div class="border border-[#262626] rounded-xl bg-white p-3 shadow-2xs">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded-md bg-[#141414] text-[#F5C438] flex items-center justify-center font-mono font-bold text-[11px] shrink-0">
+                    AI
+                  </div>
+                  <h3 class="text-[14px] font-extrabold text-[#0A0A0A] tracking-tight">AI技术储备</h3>
+                </div>
+                <span class="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-[#525252]">
+                  AI NATIVE &amp; WORKFLOWS
+                </span>
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span>大模型应用与集成</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span>AI Agent 与工作流</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span>知识库与智能检索</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0"></span>评测与部署优化</span>
+              </div>
+            </div>
+
+            <!-- 区块链技术储备 -->
+            <div class="border border-[#262626] rounded-xl bg-white p-3 shadow-2xs">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded-md bg-[#141414] text-[#F5C438] flex items-center justify-center font-mono font-bold text-[10px] shrink-0">
+                    W3
+                  </div>
+                  <h3 class="text-[14px] font-extrabold text-[#0A0A0A] tracking-tight">区块链技术储备</h3>
+                </div>
+                <span class="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-[#525252]">
+                  ON-CHAIN &amp; INFRA
+                </span>
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#141414] shrink-0"></span>智能合约开发</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#141414] shrink-0"></span>链上数据与基础设施</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#141414] shrink-0"></span>协议与机制实现</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11.5px] font-medium bg-[#FAFAFA] border border-[#D4D4D4] text-[#171717]"><span class="w-1.5 h-1.5 rounded-full bg-[#141414] shrink-0"></span>链上支付与账户体验</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Two Core Service Pillars -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3">
+            <!-- Pillar 1: 技术咨询 -->
+            <div class="border-[1.5px] border-[#141414] rounded-xl bg-white p-3.5 sm:p-4 flex flex-col justify-between shadow-xs">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#F5C438] border border-[#141414]"></span>
+                    <span class="text-[10px] font-mono font-bold text-[#737373]">SERVICE 01 · ADVISORY</span>
+                  </div>
+                  <span class="text-[11px] font-mono font-bold text-[#F5B82E]">01.</span>
+                </div>
+                <div class="flex items-baseline gap-2 mb-2 flex-wrap">
+                  <h3 class="text-[17px] font-extrabold text-[#0A0A0A] font-display">技术咨询</h3>
+                  <span class="text-[12.5px] font-bold text-[#B45309] bg-[#F5C438]/15 px-2 py-0.5 rounded">让技术路径更清晰</span>
+                </div>
+                <p class="text-[12px] sm:text-[12.5px] text-[#262626] font-medium leading-relaxed">
+                  围绕技术选型、架构设计与关键开发难点，提供专业评估与方案建议，帮助团队判断可行性、明确实现路径，让技术投入更有方向。
+                </p>
+              </div>
+              <div class="mt-2.5 pt-2 border-t border-dashed border-[#E5E5E5] flex items-center gap-2 text-[10.5px] font-mono text-[#525252]">
+                <span class="text-[#F5B82E]">✦</span>
+                <span>技术选型评估 · 架构可行性建议 · 关键难点攻坚</span>
+              </div>
+            </div>
+
+            <!-- Pillar 2: 开发支持 -->
+            <div class="border-[1.5px] border-[#141414] rounded-xl bg-white p-3.5 sm:p-4 flex flex-col justify-between shadow-xs">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#F5C438] border border-[#141414]"></span>
+                    <span class="text-[10px] font-mono font-bold text-[#737373]">SERVICE 02 · ENGINEERING</span>
+                  </div>
+                  <span class="text-[11px] font-mono font-bold text-[#F5B82E]">02.</span>
+                </div>
+                <div class="flex items-baseline gap-2 mb-2 flex-wrap">
+                  <h3 class="text-[17px] font-extrabold text-[#0A0A0A] font-display">开发支持</h3>
+                  <span class="text-[12.5px] font-bold text-[#B45309] bg-[#F5C438]/15 px-2 py-0.5 rounded">无需额外招聘，快速补齐能力</span>
+                </div>
+                <p class="text-[12px] sm:text-[12.5px] text-[#262626] font-medium leading-relaxed">
+                  当现有团队缺少 AI 或区块链方向的专项能力时，Pharos 可快速配置相应开发力量，承接功能模块并与原有团队协同交付。<strong class="font-extrabold text-[#0A0A0A] bg-[#F5C438]/25 px-1 py-0.5 rounded underline decoration-[#F5C438] decoration-2 underline-offset-2">无需另行招聘专项技术人员</strong>，减少招聘与磨合成本，让产品推进不受技术短板制约。
+                </p>
+              </div>
+              <div class="mt-2.5 pt-2 border-t border-dashed border-[#E5E5E5] flex items-center gap-2 text-[10.5px] font-mono text-[#525252]">
+                <span class="text-[#F5B82E]">✦</span>
+                <span>专项力量配置 · 核心模块承接 · 原团队协同交付</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Deliverables Strip -->
+        <div class="border-[1.5px] border-dashed border-[#1F1F1F] bg-white/95 rounded-lg px-4 py-2 mt-1.5 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="w-2 h-2 bg-[#F5C438] border border-[#0A0A0A]"></span>
+            <span class="text-[13px] font-extrabold text-[#0A0A0A]">核心交付<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#F5C438] ml-1"></span></span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-semibold text-[#171717]">
+            <span>技术评估与方案建议</span><span class="text-[#F5C438]">·</span>
+            <span>专项开发团队支持</span><span class="text-[#F5C438]">·</span>
+            <span>功能模块开发及集成协作</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 px-6 sm:px-12 pb-5 pt-3 text-[12.5px] text-[#141414] border-t border-[#F0F0EE]">
+        <div class="font-mono text-xs font-semibold text-[#737373]">06 / 06</div>
+        <div class="flex items-center gap-6 ml-auto font-medium">
+          <span>@PharosInsights</span><span>pharosinsights.com</span><span>info@pharosinsights.com</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
