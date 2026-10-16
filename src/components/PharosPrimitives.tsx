@@ -325,6 +325,7 @@ export const DiagonalWorldMap: React.FC<{ className?: string }> = ({ className =
     <img
       src={mapImg}
       alt="Pharos Global Resource Network Map"
+      crossOrigin="anonymous"
       className="w-full h-auto max-h-[220px] object-contain rounded-md"
       loading="eager"
     />
@@ -381,38 +382,16 @@ export const ArchitecturalLighthouseHero: React.FC<{ className?: string }> = ({
 
   return (
     <div className={`relative w-full max-w-[560px] flex flex-col gap-2 ${className}`}>
-      <div className="relative w-full aspect-[528/325] bg-[#0E0E0E] overflow-hidden rounded-sm shadow-md border border-[#141414]/15">
+      <div className="relative w-full aspect-[528/325] overflow-hidden rounded-sm">
         {/* Realistic Monochrome Lighthouse Photograph / User Banner */}
         <img
           src={current.src}
           alt="Pharos Architectural Lighthouse"
+          crossOrigin="anonymous"
           className="w-full h-full object-cover object-center"
           loading="eager"
           decoding="sync"
         />
-
-        {/* Subtle Architectural Scrim & CAD Crosshairs Overlay */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10" />
-
-          {/* CAD Registration Corner Marks */}
-          <svg
-            viewBox="0 0 640 440"
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            fill="none"
-          >
-            <g stroke="#FFFFFF" strokeWidth="1" opacity="0.65">
-              <line x1="16" y1="20" x2="28" y2="20" />
-              <line x1="22" y1="14" x2="22" y2="26" />
-              <line x1="612" y1="20" x2="624" y2="20" />
-              <line x1="618" y1="14" x2="618" y2="26" />
-              <line x1="16" y1="420" x2="28" y2="420" />
-              <line x1="22" y1="414" x2="22" y2="426" />
-              <line x1="612" y1="420" x2="624" y2="420" />
-              <line x1="618" y1="414" x2="618" y2="426" />
-            </g>
-          </svg>
-        </div>
       </div>
     </div>
   );
@@ -428,7 +407,7 @@ export const SlideFrame: React.FC<{
   totalPages?: number;
   categoryLabel?: string;
   children: React.ReactNode;
-}> = ({ id, pageNumber, totalPages = 8, categoryLabel, children }) => {
+}> = ({ id, pageNumber, totalPages = 9, categoryLabel, children }) => {
   return (
     <section
       id={id}
@@ -470,8 +449,8 @@ export const SlideFrame: React.FC<{
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 hover:text-[#525252] transition-colors"
           >
-            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <path d="M4 4l16 16M20 4L4 20" />
+            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
             <span>@PharosInsights</span>
           </a>

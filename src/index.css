@@ -39,17 +39,35 @@
     size: 16in 9.2in;
     margin: 0;
   }
-  body {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
     background: #FFFFFF !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    width: 100% !important;
+    min-height: 100% !important;
   }
   .no-print {
     display: none !important;
   }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  main > div {
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
   .pharos-slide-page {
-    page-break-after: always;
-    break-after: page;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
     width: 100vw !important;
     min-height: 100vh !important;
     max-width: none !important;
@@ -57,5 +75,12 @@
     border: none !important;
     margin: 0 !important;
     border-radius: 0 !important;
+    box-sizing: border-box !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .pharos-slide-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
   }
 }

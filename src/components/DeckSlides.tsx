@@ -1,4 +1,5 @@
 import React from 'react';
+import { Crown } from 'lucide-react';
 import {
   SlideFrame,
   CadDashedBox,
@@ -200,7 +201,7 @@ export const Slide3Narrative: React.FC = () => {
         {/* Top Header */}
         <div className="mb-2.5">
           <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-tight font-display inline-flex items-baseline">
-            项目叙事与产品原型设计<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
+            立项与战略规划<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
           </h2>
           <p className="text-[15.5px] sm:text-[17px] font-bold text-[#141414] mt-0.5">
             将技术优势，转化为市场听得懂、用户愿意参与的产品价值
@@ -517,9 +518,6 @@ export const Slide5Brand: React.FC = () => {
                   <h3 className="text-[18px] font-extrabold text-[#0A0A0A]">
                     <span className="text-[#F5B82E]">全球优质</span>资源网络
                   </h3>
-                  <span className="text-[11px] font-mono font-bold text-[#0A0A0A]">
-                    1,000+ MEDIA &amp; KOLS
-                  </span>
                 </div>
 
                 {/* Diagonal Yellow World Map */}
@@ -594,42 +592,33 @@ export const Slide6Tech: React.FC = () => {
     <SlideFrame id="slide-6" pageNumber={6} categoryLabel="Dual Tech Reserves">
       <div className="flex flex-col justify-between h-full">
         {/* Top Header */}
-        <div className="mb-1.5 sm:mb-2">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase bg-[#F5C438]/20 border border-[#F5C438]/60 text-[#141414]">
-              DUAL-ENGINE CAPABILITIES
-            </span>
-            <span className="text-[10.5px] font-mono text-[#737373]">TECH RESERVES &amp; DELIVERY</span>
-          </div>
+        <div className="mb-2 sm:mb-2.5">
           <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-tight font-display inline-flex items-baseline">
             AI 与区块链双重技术储备<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
           </h2>
-          <p className="text-[15px] sm:text-[17px] font-bold text-[#141414] mt-0.5">
+          <p className="text-[15px] sm:text-[17px] font-bold text-[#141414] mt-1">
             专家支持关键决策，专业团队加速开发<span className="text-[#F5C438]">。</span>
           </p>
-          <p className="text-[12px] sm:text-[12.5px] text-[#404040] mt-1 max-w-4xl leading-relaxed">
+          <p className="text-[12px] sm:text-[12.5px] text-[#404040] mt-1.5 max-w-4xl leading-relaxed">
             Pharos 拥有覆盖 AI 与区块链两大方向的技术开发团队与领域专家，为 AI 应用、区块链产品及融合场景提供专业支持。从技术咨询到开发交付，按项目需求匹配技术力量，帮助团队降低试错成本、补齐能力短板、加快产品落地。
           </p>
         </div>
 
         {/* Middle Section: Dual Tech Reserves & Two Core Service Pillars */}
-        <div className="space-y-2.5 my-auto py-1">
+        <div className="space-y-3 my-auto py-1">
           {/* Dual Tech Reserves Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* AI 技术储备 */}
-            <div className="border border-[#262626] rounded-xl bg-white/95 p-3 sm:p-3.5 shadow-2xs relative">
-              <div className="flex items-center justify-between mb-2">
+            <div className="border border-[#262626] rounded-xl bg-white/95 p-3.5 sm:p-4 shadow-2xs relative">
+              <div className="flex items-center justify-between mb-2.5">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-md bg-[#141414] text-[#F5C438] flex items-center justify-center font-mono font-bold text-[11px] shrink-0">
                     AI
                   </div>
-                  <h3 className="text-[14.5px] font-extrabold text-[#0A0A0A] tracking-tight">
+                  <h3 className="text-[15px] font-extrabold text-[#0A0A0A] tracking-tight">
                     AI技术储备
                   </h3>
                 </div>
-                <span className="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-[#525252]">
-                  AI NATIVE &amp; WORKFLOWS
-                </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {aiReserves.map((item) => (
@@ -645,19 +634,16 @@ export const Slide6Tech: React.FC = () => {
             </div>
 
             {/* 区块链技术储备 */}
-            <div className="border border-[#262626] rounded-xl bg-white/95 p-3 sm:p-3.5 shadow-2xs relative">
-              <div className="flex items-center justify-between mb-2">
+            <div className="border border-[#262626] rounded-xl bg-white/95 p-3.5 sm:p-4 shadow-2xs relative">
+              <div className="flex items-center justify-between mb-2.5">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-md bg-[#141414] text-[#F5C438] flex items-center justify-center font-mono font-bold text-[10px] shrink-0">
                     W3
                   </div>
-                  <h3 className="text-[14.5px] font-extrabold text-[#0A0A0A] tracking-tight">
+                  <h3 className="text-[15px] font-extrabold text-[#0A0A0A] tracking-tight">
                     区块链技术储备
                   </h3>
                 </div>
-                <span className="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-[#525252]">
-                  ON-CHAIN &amp; INFRA
-                </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {chainReserves.map((item) => (
@@ -674,64 +660,42 @@ export const Slide6Tech: React.FC = () => {
           </div>
 
           {/* Two Core Service Pillars */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* Pillar 1: 技术咨询 */}
-            <div className="border-[1.5px] border-[#141414] rounded-xl bg-white p-3.5 sm:p-4 flex flex-col justify-between shadow-xs relative">
+            <div className="border-[1.5px] border-[#141414] rounded-xl bg-white p-4 sm:p-4.5 flex flex-col justify-between shadow-xs relative">
               <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#F5C438] border border-[#141414]" />
-                    <span className="text-[10px] font-mono font-bold text-[#737373]">
-                      SERVICE 01 · ADVISORY
-                    </span>
-                  </div>
-                  <span className="text-[11px] font-mono font-bold text-[#F5B82E]">01.</span>
-                </div>
-                <div className="flex items-baseline gap-2 mb-2 flex-wrap">
-                  <h3 className="text-[16.5px] sm:text-[18px] font-extrabold text-[#0A0A0A] font-display">
-                    技术咨询
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-[16px] sm:text-[17.5px] font-extrabold text-[#0A0A0A] font-display">
+                    <span className="text-[#F5B82E]">技术咨询</span> ｜ 让技术路径更清晰
                   </h3>
-                  <span className="text-[12.5px] sm:text-[13px] font-bold text-[#B45309] bg-[#F5C438]/15 px-2 py-0.5 rounded">
-                    让技术路径更清晰
-                  </span>
+                  <span className="text-[13px] font-mono font-bold text-[#F5B82E]">01.</span>
                 </div>
-                <p className="text-[12px] sm:text-[12.5px] text-[#262626] font-medium leading-relaxed">
+                <p className="text-[12.5px] sm:text-[13px] text-[#262626] font-medium leading-relaxed">
                   围绕技术选型、架构设计与关键开发难点，提供专业评估与方案建议，帮助团队判断可行性、明确实现路径，让技术投入更有方向。
                 </p>
               </div>
 
-              <div className="mt-2.5 pt-2 border-t border-dashed border-[#E5E5E5] flex items-center gap-2 text-[10.5px] font-mono text-[#525252]">
+              <div className="mt-3 pt-2.5 border-t border-dashed border-[#E5E5E5] flex items-center gap-2 text-[11px] font-mono text-[#525252]">
                 <span className="text-[#F5B82E]">✦</span>
                 <span>技术选型评估 · 架构可行性建议 · 关键难点攻关</span>
               </div>
             </div>
 
             {/* Pillar 2: 开发支持 */}
-            <div className="border-[1.5px] border-[#141414] rounded-xl bg-white p-3.5 sm:p-4 flex flex-col justify-between shadow-xs relative">
+            <div className="border-[1.5px] border-[#141414] rounded-xl bg-white p-4 sm:p-4.5 flex flex-col justify-between shadow-xs relative">
               <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#F5C438] border border-[#141414]" />
-                    <span className="text-[10px] font-mono font-bold text-[#737373]">
-                      SERVICE 02 · ENGINEERING
-                    </span>
-                  </div>
-                  <span className="text-[11px] font-mono font-bold text-[#F5B82E]">02.</span>
-                </div>
-                <div className="flex items-baseline gap-2 mb-2 flex-wrap">
-                  <h3 className="text-[16.5px] sm:text-[18px] font-extrabold text-[#0A0A0A] font-display">
-                    开发支持
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-[16px] sm:text-[17.5px] font-extrabold text-[#0A0A0A] font-display">
+                    <span className="text-[#F5B82E]">开发支持</span> ｜ 无需额外招聘，快速补齐能力
                   </h3>
-                  <span className="text-[12.5px] sm:text-[13px] font-bold text-[#B45309] bg-[#F5C438]/15 px-2 py-0.5 rounded">
-                    无需额外招聘，快速补齐能力
-                  </span>
+                  <span className="text-[13px] font-mono font-bold text-[#F5B82E]">02.</span>
                 </div>
-                <p className="text-[12px] sm:text-[12.5px] text-[#262626] font-medium leading-relaxed">
-                  当现有团队缺少 AI 或区块链方向的专项能力时，Pharos 可快速配置相应开发力量，承接功能模块并与原有团队协同交付。<strong className="font-extrabold text-[#0A0A0A] bg-[#F5C438]/25 px-1 py-0.5 rounded underline decoration-[#F5C438] decoration-2 underline-offset-2">无需另行招聘专项技术人员</strong>，减少招聘与磨合成本，让产品推进不受技术短板制约。
+                <p className="text-[12.5px] sm:text-[13px] text-[#262626] font-medium leading-relaxed">
+                  当现有团队缺少 AI 或区块链方向的专项能力时，Pharos 可快速配置相应开发力量，承接功能模块并与原有团队协同交付。<strong className="font-bold text-[#0A0A0A]">无需另行招聘专项技术人员</strong>，减少招聘与磨合成本，让产品推进不受技术短板制约。
                 </p>
               </div>
 
-              <div className="mt-2.5 pt-2 border-t border-dashed border-[#E5E5E5] flex items-center gap-2 text-[10.5px] font-mono text-[#525252]">
+              <div className="mt-3 pt-2.5 border-t border-dashed border-[#E5E5E5] flex items-center gap-2 text-[11px] font-mono text-[#525252]">
                 <span className="text-[#F5B82E]">✦</span>
                 <span>专项力量配置 · 核心模块承接 · 原团队协同交付</span>
               </div>
@@ -752,35 +716,38 @@ export const Slide6Tech: React.FC = () => {
  * PAGE 7: Agentic Payment: Practice & Ecosystem Resources
  */
 export const Slide7AgenticPayment: React.FC = () => {
-  const capabilities = [
+  const syncPoints = [
     {
       num: '01',
-      title: '赛道与场景',
-      enTag: 'LANDSCAPE & POSITIONING',
-      desc: '梳理场景、参与角色与切入点，明确生态定位。',
-      detail: '从自主消费、微计费到商户结算，明确在 Agentic 经济体系中的真实价值与商业闭环。',
+      title: '一手路径经验',
+      desc: '将 TadaPay 孵化过程中积累的场景判断、产品路径与落地经验转化为参考，帮助团队识别关键问题、明确验证重点，减少重复摸索。',
     },
     {
       num: '02',
-      title: '产品与路径',
-      enTag: 'PRODUCT & INTEGRATION',
-      desc: '评估 Agent 与支付衔接的产品设计、集成需求及阶段验证路径。',
-      detail: '规划协议规范、SDK 接入、调用计费与验证里程碑，避免过度设计并缩短验证周期。',
+      title: '上下游资源共享',
+      desc: '围绕双方需求，共享适配的上下游合作资源与对接经验，推进业务交流、需求验证及合作探索，降低资源拓展成本。',
     },
     {
       num: '03',
-      title: '上下游对接',
-      enTag: 'ECOSYSTEM CONNECTIONS',
-      desc: '按需求筛选合作方，建立联系并推进合作讨论。',
-      detail: '依托真实生态沉淀，定向连接 Agent 框架、协议方、商户及流动性网络，提升合作效率。',
+      title: '产品技术与调研储备',
+      desc: '结合 TadaPay 在赛道调研、商户侧产品、Agent 支付流程及跨协议衔接上的深度研究与技术积累，共享前沿行业调研成果，开展方案交流、集成评估与联合开发探索，以互补能力加速落地。',
     },
     {
       num: '04',
-      title: '经验迁移',
-      enTag: 'KNOWLEDGE TRANSFER',
-      desc: '支持需求判断、方案与执行规划，减少重复摸索。',
-      detail: '将已验证的踩坑经验与机制设计直接复用至新项目，少走弯路，加速业务落地。',
+      title: '生态联动',
+      desc: '围绕互补场景，探索产品集成、联合试点、联合 Campaign 与生态伙伴共建，形成从产品协作到市场拓展的联动。',
     },
+  ];
+
+  const partners = [
+    { name: 'Stable', logo: '/logos/stable-wordmark-dark.svg' },
+    { name: 'Arc', logo: '/logos/Arc.png' },
+    { name: 'OSL', logo: '/logos/osl_logo_brand.png' },
+    { name: 'Solana', logo: '/logos/solanaLogo-dark.svg' },
+    { name: 'Avalanche', logo: '/logos/Avalanche_idBrnRyp_1_0.png' },
+    { name: 'StraitsX', logo: '/logos/straitsx.png', className: 'scale-140 sm:scale-150' },
+    { name: 'Kite', logo: '/logos/Kite_Logo_Beige.png' },
+    { name: 'x402', logo: '/logos/x402_logo.svg' },
   ];
 
   return (
@@ -789,144 +756,145 @@ export const Slide7AgenticPayment: React.FC = () => {
         {/* Top Header */}
         <div className="mb-2">
           <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-tight font-display inline-flex items-baseline">
-            Agentic Payment：实践与生态资源<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
+            Agentic Payment：同赛道孵化，资源共享与生态协同<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
           </h2>
           <p className="text-[15.5px] sm:text-[17px] font-bold text-[#141414] mt-0.5">
             将真实孵化经验，转化为产品路径与生态连接<span className="text-[#F5C438]">。</span>
           </p>
-          <p className="text-[12.5px] text-[#404040] mt-1 max-w-4xl leading-relaxed">
-            自 2026 年初孵化{' '}
-            <strong className="font-extrabold text-[#0A0A0A] bg-[#FFF8E6] px-1 py-0.5 border border-[#F5C438]/50 rounded">
-              TadaPay — the merchant layer for agentic payment
-            </strong>
+          <p className="text-[12px] sm:text-[12.5px] text-[#404040] mt-1 max-w-4xl leading-relaxed">
+            自 2026 年初孵化同赛道项目{' '}
+            <strong className="font-bold text-[#0A0A0A]">TadaPay</strong>
             ，积累上下游资源及产品机制、生态协作经验，为 AI Agent、支付与相关商业场景提供定向支持。
           </p>
         </div>
 
-        {/* 2-Column Split: Case Blueprint on Left, 4 Capabilities on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch my-1">
-          {/* Left Column: TadaPay Real Incubation Blueprint */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
-            <CadDashedBox padding="p-4 sm:p-4.5" className="h-full flex flex-col justify-between bg-white/95">
-              <div>
-                <div className="flex items-center justify-between gap-2 border-b border-[#E5E5E5] pb-2 mb-3">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#F5C438] border border-[#0A0A0A]" />
-                    <span className="text-[12px] font-mono font-extrabold text-[#0A0A0A] tracking-wider">
-                      INCUBATION SPOTLIGHT
-                    </span>
-                  </div>
-                  <span className="text-[10px] font-mono text-[#737373]">EST. 2026</span>
-                </div>
-
-                <div className="space-y-1">
-                  <div className="flex items-baseline gap-2">
-                    <h3 className="text-[22px] sm:text-[24px] font-extrabold text-[#0A0A0A] font-display">
-                      TadaPay<span className="text-[#F5C438]">.</span>
-                    </h3>
-                    <span className="text-[11px] font-mono font-semibold text-[#525252]">
-                      The merchant layer
-                    </span>
-                  </div>
-                  <p className="text-[12px] text-[#262626] font-medium leading-snug">
-                    for agentic payment
+        {/* 2-Column Split: TadaPay on Left, 同期孵化项目协同 on Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch my-auto py-1">
+          {/* Left Column: TadaPay */}
+          <div className="lg:col-span-5 flex flex-col">
+            <CadDashedBox padding="p-4 sm:p-5" className="h-full flex flex-col justify-between bg-white/95">
+              <div className="space-y-3">
+                {/* TadaPay Title */}
+                <div>
+                  <h3 className="text-[17.5px] sm:text-[19px] font-extrabold text-[#0A0A0A] font-display">
+                    <span className="text-[#F5B82E]">TadaPay</span> ｜ Agent 支付商户层基础设施
+                  </h3>
+                  <p className="text-[12px] sm:text-[12.5px] text-[#333333] mt-1.5 leading-relaxed">
+                    TadaPay 是 Pharos 孵化的 Agentic Payment 项目，为商户与中小企业打造
+                    <strong className="font-bold text-[#0A0A0A]">一站式 Agent 收付款基础设施与解决方案</strong>，连接商户经营需求与 Agent 支付场景。
                   </p>
                 </div>
 
-                {/* Architectural Layer Diagram */}
-                <div className="mt-3.5 space-y-2">
-                  <div className="text-[10.5px] font-mono font-bold text-[#737373] flex items-center justify-between">
-                    <span>AGENTIC STACK ARCHITECTURE</span>
-                    <span className="text-[#F5C438]">● REAL INFRA</span>
+                {/* Core Products 3 Features - Flat without background boxes */}
+                <div className="space-y-2.5 py-1">
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0 mt-1.5" />
+                    <div>
+                      <strong className="font-extrabold text-[#0A0A0A] text-[12.5px]">Agent 可读结算页面</strong>
+                      <p className="text-[#525252] text-[11.5px] mt-0.5 leading-relaxed">
+                        面向自主 Agent 消费的结构化参数解析与即时清结算链路
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="border border-[#262626] rounded-lg p-2 bg-[#FAFAFA] text-[11px]">
-                    <div className="flex items-center justify-between font-bold text-[#0A0A0A]">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438]" />
-                        01. AI Agent 交互层
-                      </span>
-                      <span className="font-mono text-[9px] text-[#737373]">INTENT &amp; BUDGET</span>
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0 mt-1.5" />
+                    <div>
+                      <strong className="font-extrabold text-[#0A0A0A] text-[12.5px]">商户管理台</strong>
+                      <p className="text-[#525252] text-[11.5px] mt-0.5 leading-relaxed">
+                        自动化账单归集、流水对账、权限与多币种费率看板
+                      </p>
                     </div>
-                    <p className="text-[#525252] text-[10.5px] mt-0.5 leading-tight">
-                      自主意图触发、授权凭证（Session Keys）与预算限额管理
-                    </p>
                   </div>
 
-                  <div className="border border-[#262626] rounded-lg p-2 bg-[#FFFDF5] border-[#F5C438]/80 text-[11px]">
-                    <div className="flex items-center justify-between font-extrabold text-[#0A0A0A]">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438]" />
-                        02. TadaPay 商户层 (Merchant Layer)
-                      </span>
-                      <span className="font-mono text-[9px] text-[#D97706] font-bold">CORE HUB</span>
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0 mt-1.5" />
+                    <div>
+                      <strong className="font-extrabold text-[#0A0A0A] text-[12.5px]">跨 Agent 支付协议中间层</strong>
+                      <p className="text-[#525252] text-[11.5px] mt-0.5 leading-relaxed">
+                        兼容主流 Agent 框架与多链/稳定币支付协议的通用桥接
+                      </p>
                     </div>
-                    <p className="text-[#525252] text-[10.5px] mt-0.5 leading-tight">
-                      动态发票生成、微支付聚合、商户接入与分账结算
-                    </p>
-                  </div>
-
-                  <div className="border border-[#262626] rounded-lg p-2 bg-[#FAFAFA] text-[11px]">
-                    <div className="flex items-center justify-between font-bold text-[#0A0A0A]">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438]" />
-                        03. 链上结算与流动性网络
-                      </span>
-                      <span className="font-mono text-[9px] text-[#737373]">ON-CHAIN SETTLEMENT</span>
-                    </div>
-                    <p className="text-[#525252] text-[10.5px] mt-0.5 leading-tight">
-                      x402 / Pay-per-Call 协议支撑、稳定币清算与低成本极速结算
-                    </p>
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-3 pt-2.5 border-t border-dashed border-[#D4D4D4] flex items-center justify-between text-[11px] text-[#525252]">
-                <span>沉淀一手生态经验</span>
-                <span className="font-mono font-bold text-[#0A0A0A]">定向开放上下游资源</span>
+                {/* Partner Logos Section */}
+                <div className="pt-2 border-t border-dashed border-[#D4D4D4]">
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-[#737373] tracking-wider">
+                      合作伙伴与生态接入
+                    </span>
+                    <span className="text-[9.5px] font-mono font-semibold text-[#D97706] bg-[#F5C438]/15 px-1.5 py-0.5 rounded">
+                      8 PARTNERS
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-4 gap-1.5">
+                    {partners.map((p) => (
+                      <div
+                        key={p.name}
+                        className="h-9 sm:h-9.5 px-1.5 py-1 rounded-md bg-white border border-[#E0E0DC] hover:border-[#141414] transition-colors flex items-center justify-center shadow-2xs group relative"
+                        title={p.name}
+                      >
+                        <img
+                          src={p.logo}
+                          alt={p.name}
+                          crossOrigin="anonymous"
+                          className={`max-h-5 sm:max-h-6 max-w-full object-contain ${p.className || ''}`}
+                          loading="eager"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </CadDashedBox>
           </div>
 
-          {/* Right Column: 4 Capabilities Grid */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {capabilities.map((c) => (
-              <div
-                key={c.title}
-                className="border border-[#262626] rounded-xl bg-white/95 p-3.5 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-[10px] font-mono font-bold text-[#737373]">
-                      {c.enTag}
-                    </span>
-                    <span className="text-[11px] font-mono font-bold text-[#F5B82E]">
-                      {c.num}.
-                    </span>
-                  </div>
-
-                  <h3 className="text-[15px] font-extrabold text-[#0A0A0A]">
-                    {c.title}
+          {/* Right Column: 同期孵化项目协同｜资源共享，优势互补 */}
+          <div className="lg:col-span-7 border-[1.5px] border-[#141414] rounded-xl bg-white p-4.5 sm:p-5 flex flex-col justify-between shadow-xs relative">
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Header without SYNERGY badge */}
+                <div className="mb-2">
+                  <h3 className="text-[17px] sm:text-[18.5px] font-extrabold text-[#0A0A0A] font-display">
+                    <span className="text-[#F5B82E]">同期孵化项目协同</span> ｜ 资源共享，优势互补
                   </h3>
-
-                  <p className="text-[12px] font-bold text-[#141414] mt-1 leading-snug">
-                    {c.desc}
-                  </p>
                 </div>
 
-                <div className="mt-3 pt-2 border-t border-dashed border-[#E5E5E5] text-[11px] text-[#525252] leading-relaxed">
-                  {c.detail}
-                </div>
+                <p className="text-[12px] sm:text-[12.5px] text-[#404040] leading-relaxed mb-3.5">
+                  对于同样深耕 Agentic Payment 的项目，Pharos 不仅提供研究与执行支持，更可依托 TadaPay 的同赛道实践，推动同期孵化项目之间的经验、资源与能力协同。
+                </p>
               </div>
-            ))}
+
+              {/* 4 Points in 2x2 Grid filling full remaining height with zero bottom excess */}
+              <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3 items-stretch mt-1">
+                {syncPoints.map((item) => (
+                  <div
+                    key={item.title}
+                    className="border border-[#262626] rounded-xl p-3.5 sm:p-4 bg-[#FAFAFA] hover:bg-white flex flex-col justify-between shadow-2xs hover:border-[#F5C438] transition-all"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-[#EBEBEB]">
+                        <div className="flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438]" />
+                          <h4 className="text-[13.5px] sm:text-[14px] font-extrabold text-[#0A0A0A]">
+                            {item.title}
+                          </h4>
+                        </div>
+                        <span className="text-[10.5px] font-mono font-bold text-[#F5B82E]">
+                          {item.num}.
+                        </span>
+                      </div>
+                      <p className="text-[12px] text-[#404040] leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Bottom Deliverables Strip */}
-        <DeliverableStrip
-          items={['场景与赛道分析', '产品路径建议', '合作方梳理及对接']}
-          note="资源匹配与推进取决于项目需求及合作方意愿；引荐不等于合作结果承诺。"
-        />
       </div>
     </SlideFrame>
   );
@@ -940,37 +908,37 @@ export const Slide8TGE: React.FC = () => {
     {
       icon: 'contract' as const,
       num: '01',
-      tag: 'TGE ADVISORY',
-      title: 'TGE 策略',
-      desc: '梳理准备事项、节奏、外部依赖与资源，协调产品、经济模型、社区及市场信息。',
+      tag: 'TGE PREPARATION',
+      title: 'TGE 准备',
+      desc: '协同发行机制、社区动员与市场传播，把握 TGE 的关键节奏。',
       points: [
-        '发行清单：梳理产品里程碑、法律合规与外部依赖项',
-        '信息统筹：协同 Tokenomics、社区动员与市场发声节点',
-        '节奏把控：综合宏观市场窗口与项目就绪度规划排期',
+        { label: '发行设计', desc: '统筹代币发行、解锁策略与空投计划。' },
+        { label: '市场引爆', desc: '联动媒体、KOL 与社区，集中曝光、协同发声。' },
+        { label: '全局节奏', desc: '整合运营、市场与经济模型，把控宏观节奏与发行窗口。' },
       ],
     },
     {
       icon: 'exchange' as const,
       num: '02',
-      tag: 'EXCHANGES & MM',
-      title: '交易所与做市',
-      desc: '支持交易所对接、材料准备与合作推进；围绕流动性需求，协调做市方、方案及执行衔接。',
+      tag: 'EXCHANGE STRATEGY',
+      title: '交易所策略',
+      desc: '从平台布局到谈判落地，构建兼顾市场影响力与成本效率的上币路径。',
       points: [
-        '机构对接：协助准备 Listing Materials、尽调与合作跟进',
-        '做市协调：对接合规做市方，评估做市策略与流动性池深度',
-        '执行协同：打通充提网络、钱包集成与开盘关键流程',
+        { label: '上币策略', desc: '规划交易所组合与上线顺序，平衡市场覆盖与投入产出。' },
+        { label: '渠道与谈判', desc: '对接关键上币资源，推进商务谈判，争取有利条件。' },
+        { label: '落地推进', desc: '统筹上币材料、尽调准备与上线协调。' },
       ],
     },
     {
       icon: 'treasury' as const,
       num: '03',
-      tag: 'TREASURY & GOVERNANCE',
-      title: '资产管理',
-      desc: '讨论管理目标、流动性与风险边界，明确团队及合作方分工，按确认范围提供支持。',
+      tag: 'MM & CAPITAL OPERATIONS',
+      title: '做市与资本运作',
+      desc: '统筹开盘策略与流动性安排，为代币上线及持续交易提供专业支持。',
       points: [
-        '目标梳理：明确项目金库流动性诉求与防守型安全边界',
-        '权限与分工：协助界定团队内部职责与专业第三方服务界限',
-        '风控意识：强化多签管理、防脱锚机制与合规审计准备',
+        { label: '开盘策略', desc: '规划初始流动性、开盘节奏与风险预案。' },
+        { label: '做市协同', desc: '提供流动性服务与定制化做市策略支持，优化市场深度与交易效率。' },
+        { label: '资本运作', desc: '制定资产变现与仓位管理策略，评估阶段性交易机会，兼顾资金回笼与风险控制。' },
       ],
     },
   ];
@@ -981,7 +949,7 @@ export const Slide8TGE: React.FC = () => {
         {/* Top Header */}
         <div className="mb-2">
           <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-tight font-display inline-flex items-baseline">
-            TGE 与金融运作支持<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
+            TGE 与资本运作支持<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
           </h2>
           <p className="text-[15.5px] sm:text-[17px] font-bold text-[#141414] mt-0.5">
             让 TGE 成为有准备的里程碑，而非孤立的发行事件<span className="text-[#F5C438]">。</span>
@@ -996,13 +964,10 @@ export const Slide8TGE: React.FC = () => {
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="border border-[#262626] rounded-xl bg-white/95 p-4 sm:p-5 flex flex-col justify-between flex-1 relative shadow-xs"
+              className="border border-[#262626] rounded-xl bg-white/95 p-4 sm:p-5 flex flex-col justify-between flex-1 relative shadow-xs hover:border-[#141414] transition-colors"
             >
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-mono font-bold text-[#737373]">
-                    {p.tag}
-                  </span>
+                <div className="flex items-center justify-end mb-2">
                   <span className="text-[12px] font-mono font-bold text-[#F5B82E]">
                     {p.num}.
                   </span>
@@ -1011,28 +976,26 @@ export const Slide8TGE: React.FC = () => {
                 <div className="flex items-start gap-3 mb-3">
                   <PharosIcon type={p.icon} className="w-9 h-9 shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-[#0A0A0A]">
+                    <h3 className="text-[16.5px] sm:text-[17.5px] font-extrabold text-[#0A0A0A] font-display">
                       {p.title}
                     </h3>
-                    <p className="text-[12px] font-bold text-[#141414] leading-snug mt-1">
+                    <p className="text-[12px] font-medium text-[#262626] leading-snug mt-1">
                       {p.desc}
                     </p>
                   </div>
                 </div>
 
-                <ul className="space-y-2 pt-3 border-t border-dashed border-[#E5E5E5] text-[11.5px] sm:text-[12px] text-[#404040]">
+                <ul className="space-y-2.5 pt-3.5 border-t border-dashed border-[#E5E5E5] text-[11.5px] sm:text-[12px] text-[#404040]">
                   {p.points.map((pt) => (
-                    <li key={pt} className="flex items-start gap-2">
+                    <li key={pt.label} className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0 mt-1.5" />
-                      <span className="leading-snug">{pt}</span>
+                      <span className="leading-relaxed">
+                        <strong className="font-extrabold text-[#0A0A0A]">{pt.label}：</strong>
+                        {pt.desc}
+                      </span>
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="mt-4 pt-2.5 border-t border-[#F0F0F0] flex items-center justify-between text-[10.5px] font-mono text-[#737373]">
-                <span>ADVISORY &amp; EXECUTION</span>
-                <span className="text-[#0A0A0A] font-bold">READY</span>
               </div>
             </div>
           ))}
@@ -1041,13 +1004,224 @@ export const Slide8TGE: React.FC = () => {
         {/* Bottom Deliverables Strip */}
         <DeliverableStrip
           items={[
-            'TGE 清单与阶段计划',
-            '交易所材料',
-            '资源对接',
-            '流动性及资产管理策略及执行',
+            'TGE 准备清单与排期',
+            '交易所对接与商务推进',
+            '做市策略方案与流动性规划',
+            '资本运作与仓位管理策略',
           ]}
-          note="不承诺上币结果、代币价格或投资回报；交易执行、托管等受监管活动由具备相应资质的主体承担，合规要求另行确认。"
         />
+      </div>
+    </SlideFrame>
+  );
+};
+
+/**
+ * PAGE 9: Services & Partnership Packages (服务明细与合作方案)
+ */
+export const Slide9Services: React.FC = () => {
+  const serviceModules = [
+    {
+      module: '立项与战略',
+      items: [
+        { name: '叙事设计', support: false, incubation: true, strategic: '升级' },
+        { name: '产品原型优化', support: false, incubation: true, strategic: '升级' },
+        { name: '经济模型设计', support: false, incubation: true, strategic: '升级' },
+        { name: '关键物料储备（官网、白皮书、deck）', support: false, incubation: true, strategic: true },
+        { name: '项目战略发展及Roadmap设计', support: false, incubation: false, strategic: true },
+        { name: '融资策略及融资咨询', support: false, incubation: false, strategic: true },
+      ],
+    },
+    {
+      module: '运营与增长',
+      items: [
+        { name: '社区社媒运营', support: true, incubation: true, strategic: true },
+        { name: '活动运营', support: true, incubation: true, strategic: true },
+        { name: 'GTM及增长策略设计', support: false, incubation: true, strategic: '升级' },
+        {
+          name: '生态资源拓展',
+          support: '仅限运营合作',
+          incubation: '支持商务及技术合作',
+          strategic: '核心资源共享',
+        },
+      ],
+    },
+    {
+      module: '品牌与市场',
+      items: [
+        { name: '品牌视觉建设', support: false, incubation: true, strategic: true },
+        { name: '内容策略与执行', support: true, incubation: true, strategic: true },
+        { name: '市场投放（KOL、PR、社区）', support: true, incubation: true, strategic: true },
+        { name: '线上及线下活动曝光', support: '仅线上', incubation: true, strategic: true },
+        { name: '地区本地化支持', support: false, incubation: false, strategic: true },
+        { name: '全球渠道合作', support: false, incubation: false, strategic: true },
+      ],
+    },
+    {
+      module: '技术支持',
+      items: [
+        { name: '技术咨询', support: false, incubation: true, strategic: true },
+        { name: '开发配置', support: false, incubation: false, strategic: true },
+      ],
+    },
+  ];
+
+  const renderStatus = (val: boolean | string) => {
+    if (val === true) {
+      return (
+        <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#141414] text-[#F5C438] text-[9.5px] font-bold shadow-2xs">
+          ✓
+        </span>
+      );
+    }
+    if (val === false) {
+      return <span className="text-[#A3A3A3] text-[11px] font-mono">✕</span>;
+    }
+    if (val === '升级') {
+      return (
+        <span className="inline-flex items-center justify-center gap-1 px-2 py-0.5 rounded-full bg-[#141414] border border-[#F5C438]/50 text-[#F5C438] text-[10px] sm:text-[10.5px] font-bold shadow-xs whitespace-nowrap">
+          <Crown className="w-3 h-3 text-[#F5C438] fill-[#F5C438] shrink-0" />
+          <span>升级</span>
+        </span>
+      );
+    }
+    return (
+      <span className="inline-flex items-center justify-center gap-1.5 text-[#141414] text-[11px] sm:text-[11.5px] font-medium whitespace-nowrap">
+        <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#141414] text-[#F5C438] text-[9.5px] font-bold shrink-0 shadow-2xs">
+          ✓
+        </span>
+        <span className="text-[#141414]">{val}</span>
+      </span>
+    );
+  };
+
+  return (
+    <SlideFrame id="slide-9" pageNumber={9} totalPages={9} categoryLabel="Partnership & Scope">
+      <div className="flex flex-col justify-between h-full">
+        {/* Top Header */}
+        <div className="mb-2">
+          <h2 className="text-[26px] sm:text-[32px] font-extrabold tracking-[-0.03em] text-[#0A0A0A] leading-tight font-display inline-flex items-baseline">
+            服务明细与合作方案<span className="inline-block w-2 h-2 rounded-full bg-[#F5C438] ml-1.5 shrink-0" aria-hidden="true" />
+          </h2>
+          <p className="text-[13.5px] sm:text-[15px] font-bold text-[#141414] mt-0.5">
+            根据项目阶段、团队能力与合作目标，提供由浅入深的三种合作模式<span className="text-[#F5C438]">。</span>
+          </p>
+        </div>
+
+        {/* Matrix Table */}
+        <div className="border border-[#262626] rounded-xl bg-white overflow-hidden shadow-xs my-auto">
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-left text-[11px] sm:text-[11.5px]">
+              {/* Table Header: 3 Tiers */}
+              <thead>
+                <tr className="border-b border-[#262626] bg-[#FAFAFA]">
+                  <th className="py-2.5 px-3 w-[100px] font-mono font-bold text-[10px] text-[#737373] uppercase border-r border-[#E5E5E5]">
+                    服务模块
+                  </th>
+                  <th className="py-2.5 px-3 w-[220px] font-mono font-bold text-[10px] text-[#737373] uppercase border-r border-[#E5E5E5]">
+                    服务项目
+                  </th>
+                  <th className="py-2 px-3 w-[210px] border-r border-[#E5E5E5]">
+                    <div className="text-[13.5px] font-extrabold text-[#0A0A0A] font-display">
+                      运营支持
+                    </div>
+                    <p className="text-[11px] sm:text-[11.5px] text-[#525252] font-normal leading-snug mt-1">
+                      聚焦日常社区社媒运营与品牌传播，<br />提供专业执行支持
+                    </p>
+                  </th>
+                  <th className="py-2 px-3 w-[210px] border-r border-[#E5E5E5]">
+                    <div className="text-[13.5px] font-extrabold text-[#0A0A0A] font-display">
+                      孵化共建
+                    </div>
+                    <p className="text-[11px] sm:text-[11.5px] text-[#525252] font-normal leading-snug mt-1">
+                      全周期策略支持，<br />助力项目从定位走向市场。
+                    </p>
+                  </th>
+                  <th className="py-2 px-3 w-[210px]">
+                    <div className="text-[13.5px] font-extrabold text-[#0A0A0A] font-display">
+                      战略共创
+                    </div>
+                    <p className="text-[11px] sm:text-[11.5px] text-[#525252] font-normal leading-snug mt-1">
+                      深度参与战略与执行，<br />共享核心资源，共建长期价值
+                    </p>
+                  </th>
+                </tr>
+
+                {/* Price Row */}
+                <tr className="border-b border-[#262626] bg-[#F7F7F5] font-mono">
+                  <td colSpan={2} className="py-2 px-3 text-[11.5px] font-extrabold text-[#0A0A0A] border-r border-[#E5E5E5]">
+                    <span>报价方案</span>
+                  </td>
+                  <td className="py-2 px-3 border-r border-[#E5E5E5]">
+                    <span className="text-[12px] sm:text-[13px] font-extrabold text-[#0A0A0A]">
+                      6,800 <span className="text-[9.5px] font-medium text-[#737373]">USDT / 月</span>
+                    </span>
+                  </td>
+                  <td className="py-2 px-3 border-r border-[#E5E5E5]">
+                    <span className="text-[12px] sm:text-[13px] font-extrabold text-[#0A0A0A]">
+                      12,800 <span className="text-[9.5px] font-medium text-[#737373]">USDT / 月</span>
+                    </span>
+                  </td>
+                  <td className="py-2 px-3">
+                    <span className="text-[12px] sm:text-[13px] font-extrabold text-[#0A0A0A]">
+                      26,800 <span className="text-[9.5px] font-medium text-[#737373]">USDT/月 （可谈股权或币权方案）</span>
+                    </span>
+                  </td>
+                </tr>
+              </thead>
+
+              {/* Table Body */}
+              <tbody className="divide-y divide-[#EBEBEB]">
+                {serviceModules.map((mod) => (
+                  <React.Fragment key={mod.module}>
+                    {mod.items.map((item, idx) => (
+                      <tr key={item.name} className="hover:bg-[#F9F9F8] transition-colors">
+                        {idx === 0 && (
+                          <td
+                            rowSpan={mod.items.length}
+                            className="py-1.5 px-3 font-bold text-[#0A0A0A] bg-[#FAFAFA] border-r border-[#E5E5E5] align-top select-none"
+                          >
+                            <div className="sticky top-0 flex items-center gap-1.5 pt-0.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#F5C438] shrink-0" />
+                              <span className="text-[11.5px]">{mod.module}</span>
+                            </div>
+                          </td>
+                        )}
+                        <td className="py-1.5 px-3 text-[#262626] font-medium border-r border-[#E5E5E5]">
+                          {item.name}
+                        </td>
+                        <td className="py-1.5 px-3 text-center border-r border-[#E5E5E5]">
+                          {renderStatus(item.support)}
+                        </td>
+                        <td className="py-1.5 px-3 text-center border-r border-[#E5E5E5]">
+                          {renderStatus(item.incubation)}
+                        </td>
+                        <td className="py-1.5 px-3 text-center">
+                          {renderStatus(item.strategic)}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Bottom Notes */}
+        <div className="mt-2 space-y-1 text-[10.5px] sm:text-[11px] text-[#525252] border-t border-[#EAEAE6] pt-2">
+          <div className="flex items-start gap-1.5">
+            <span className="font-mono font-bold text-[#F5B82E] shrink-0">1.</span>
+            <p className="leading-tight">
+              服务费根据所选模式、具体交付范围、合作周期与人员投入确定；表中包含的服务，其执行深度、工作量与验收标准在启动前另行明确。
+            </p>
+          </div>
+          <div className="flex items-start gap-1.5">
+            <span className="font-mono font-bold text-[#F5B82E] shrink-0">2.</span>
+            <p className="leading-tight">
+              KOL、媒体投放、场地及第三方技术等外部支出与服务费分列，执行前确认预算。新增需求与范围调整另行协商。
+            </p>
+          </div>
+        </div>
       </div>
     </SlideFrame>
   );
